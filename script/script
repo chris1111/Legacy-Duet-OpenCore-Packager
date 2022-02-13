@@ -1,0 +1,49 @@
+#!/bin/bash
+# script for Installer Legacy OpenCore Package
+# Legacy OpenCorePackage by chris1111
+#
+
+PARENTDIR=$(dirname "$0")
+cd "$PARENTDIR"
+
+# shell script Notifications
+osascript -e 'display notification "Installer Legacy OpenCore Package" with title "Création"  sound name "default"'
+
+# Delete build if exist
+rm -rf /Private/tmp/OC-EFI
+rm -rf /Private/tmp/OpenCore-Package
+Sleep 1
+mkdir -p /Private/tmp/OpenCore-Package/BUILD-PACKAGE
+mkdir -p /Private/tmp/OC-EFI
+Sleep 1
+for var in "$@"
+do
+rm -rf ./OC-EFI/EFIROOTDIR/EFI
+cp -rp "$@" ./OC-EFI/EFIROOTDIR
+find . -name '.DS_Store' -type f -delete
+
+
+echo "
+= = = = = = = = = = = = = = = = = = = = = = = = =
+Create the Packages with pkgbuild "
+# Create the Packages with pkgbuild
+pkgbuild --root ./OC-EFI --scripts ./ScriptEFI --identifier com.opencorePackage.OpenCorePackage.pkg --version 1.0 --install-location /Private/tmp /Private/tmp/OpenCore-Package/BUILD-PACKAGE/opencorePackage.pkg
+rm -rf $HOME/Desktop/OpenCore-Package.pkg
+Sleep 3
+# Copy resources and distribution
+cp -r ./Distribution /Private/tmp/OpenCore-Package/BUILD-PACKAGE/Distribution.xml
+cp -rp ./Resources /Private/tmp/OpenCore-Package/BUILD-PACKAGE/
+echo "
+= = = = = = = = = = = = = = = = = = = = = = = = =
+Create the finale Packages with Productbuild "
+rm -rf "$HOME/Desktop/Legacy-OpenCore-Package.pkg"
+Sleep 3
+# Build the final Packages with Productbuild
+productbuild --distribution "/Private/tmp/OpenCore-Package/BUILD-PACKAGE/Distribution.xml"  \
+--package-path "/Private/tmp/OpenCore-Package/BUILD-PACKAGE/" \
+--resources "/Private/tmp/OpenCore-Package/BUILD-PACKAGE/Resources" \
+"$HOME/Desktop/Legacy-OpenCore-Package.pkg"
+rm -rf ./OC-EFI/EFIROOTDIR/EFI
+done
+
+
