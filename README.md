@@ -1,4 +1,4 @@
-# Legacy-OpenCore-Package
+# Legacy-OpenCore-Packager
 
 ### It is the only macOS Package Installer capable of installing OpenCore in Legacy. 
 - Works on an Internal or External disk
