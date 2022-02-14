@@ -20,3 +20,4 @@
 See Package LOG ➤ [LOG USB Install Media](https://user-images.githubusercontent.com/6248794/153766357-1b9542ef-7ce1-43cb-a5f6-fea0281feab9.png)
 
 This EFI folder was created based on my DELL Optiplex 790 Legacy booting ☞ Download ➤ [EFI Folder](https://github.com/chris1111/Legacy-OpenCore-Packager/raw/Master/EFI.zip)
+- If you use a different config you must adapt the EFI as well as the config.plist. ☞ [Adapt to your use](https://user-images.githubusercontent.com/6248794/153845678-64ff286e-dd74-407b-8acb-6b54dbb58cab.png)
