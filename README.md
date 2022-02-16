@@ -8,6 +8,10 @@
 
 ### Download ➤ [Legacy OpenCore Packager](https://github.com/chris1111/Legacy-OpenCore-Packager/raw/Master/Legacy%20OpenCore%20Packager.zip)
 
+### Looking for ➤ [OpenCore Packager](https://github.com/chris1111/OpenCore-Packager)
+
+### Looking for ➤ [Clover Packager](https://github.com/chris1111/Clover-Packager)
+
 ![Screen Shot App](https://user-images.githubusercontent.com/6248794/153775351-303ed6c4-533f-4e11-9589-2dd087f5ab64.png)
 
 ![Screen Shot Package](https://user-images.githubusercontent.com/6248794/153775352-eec1ee02-bf0b-4fce-9c1c-f53995bb1799.png)
