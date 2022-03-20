@@ -1,5 +1,8 @@
 # Legacy-OpenCore-Packager
 
+### Latest Update 20 Mar 2022 Fix a bug EFI not transfered
+- Adapt for macOS 12.3, Update OC 0.8.0
+
 ### It is the only macOS Package Installer capable of installing OpenCore in Legacy. 
 - Works on an Internal or External disk
 - Works on HFS+J or APFS file system
