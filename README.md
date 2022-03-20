@@ -9,7 +9,7 @@
 - The Package (.pkg) can be used with SIP enabled
 - Credit: [Acidanthera](https://github.com/acidanthera/OpenCorePkg), [partutil JrCs](https://github.com/chris1111/partutil), [MountESP Clover team](https://github.com/CloverHackyColor/CloverBootloader/tree/master/CloverPackage/package/Scripts.templates/EFIFolder)
 
-### Download ➤ [Legacy OpenCore Packager](https://github.com/chris1111/Legacy-OpenCore-Packager/raw/Master/Legacy%20OpenCore%20Packager.zip)
+### Download ➤ [Legacy OpenCore Packager](https://github.com/chris1111/Legacy-OpenCore-Packager/raw/Master/Legacy%20OpenCore%20Packager.dmg.zip)
 
 
 ### Looking for ➤ [OpenCore Packager](https://github.com/chris1111/OpenCore-Packager)
