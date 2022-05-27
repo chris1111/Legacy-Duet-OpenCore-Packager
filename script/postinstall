@@ -271,14 +271,13 @@ fi
 
 
 boottype='x64'
-opencoreEFIFile='bootx'
+opencoreEFIFile='bootX64'
 
 echo "$boottype" > "${DEST_VOL}/Private/tmp/boottype"
 
 if [[ -f "${DEST_VOL}/Private/tmp/usr/standalone/i386/$boottype/$opencoreEFIFile" ]]; then
     cp -v "${DEST_VOL}/Private/tmp/usr/standalone/i386/$boottype/$opencoreEFIFile" "${EFI_ROOT_DIR}/boot"
-    #chflags hidden "${EFI_ROOT_DIR}/boot"
-    echo "Stage 2 - Written $opencoreEFIFile ($boottype) to ${EFI_ROOT_DIR}/boot" >> "$install_log"
+    echo "Stage 2 - Written $opencoreEFIFile to ${EFI_ROOT_DIR}/boot" >> "$install_log"
 fi
 
 
@@ -303,7 +302,7 @@ rm -f "${DEST_VOL}/Private/tmp/boottype"
 # Remove link to the partition that contain the EFI folder
 rm -rf "${DEST_VOL}"/Private/tmp/EFIROOTDIR
 
-# Remove files
+# Remove OC files
 rm -rf "${DEST_VOL}"/Private/tmp/usr
 rm -rf /Private/tmp/origbs
 rm -rf /Private/tmp/newbs
@@ -314,8 +313,4 @@ rm -rf /Private/tmp/newMBR
 # Clean Up make sur
 rm -rf /tmp/origbs /tmp/newbs /tmp/newMBR /tmp/origMBR
 
-
-
-
-
-		
+	
