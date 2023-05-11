@@ -26,7 +26,7 @@ DEST_VOL="${3}"
 EFI_ROOT_DIR=$(cd "${DEST_VOL}"/Private/tmp/EFIROOTDIR; pwd -P)
 install_log="${DEST_VOL}/Private/tmp/OpenCore_Install_Log.txt"
 plistbuddy='/usr/libexec/PlistBuddy'
-installer_choice="org.opencore-legacy.bootloader.boot0"
+installer_choice="org.opencore-legacy.bootloader.boot0af"
 installer_altboot_refid='org.opencore-legacy.bootloader.altboot'
 #fdisk440="${DEST_VOL}"/Private/tmp/usr/local/bin/fdisk440
 boot1install="${DEST_VOL}"/Private/tmp/usr/local/bin/boot1-install
@@ -281,10 +281,8 @@ if [[ -f "${DEST_VOL}/Private/tmp/usr/standalone/i386/$boottype/$opencoreEFIFile
 fi
 
 
-
-
 echo "======================================================================" >> "${install_log}"
-echo "=========== Legacy OpenCore Bootloader Installation Finish ===========" >> "${install_log}"
+echo "=========== Duet OpenCore Bootloader Installation Finish ===========" >> "${install_log}"
 echo "======================================================================" >> "${install_log}"
 
 # ---------------------------------------------
@@ -311,6 +309,4 @@ rm -rf /Private/tmp/newMBR
 
 
 # Clean Up make sur
-rm -rf /tmp/origbs /tmp/newbs /tmp/newMBR /tmp/origMBR
-
-	
+rm -rf /Private/tmp/origbs /Private/tmp/newbs /Private/tmp/newMBR /Private/tmp/origMBR

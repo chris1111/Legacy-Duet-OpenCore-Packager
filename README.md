@@ -1,7 +1,7 @@
 # Legacy-OpenCore-Packager
 
-### Latest Update 20 Mar 2022 Fix a bug EFI not transfered
-- Adapt for macOS 12.3, Update OC 0.8.0
+### Latest Update 11 May 2023 Add Option creating NVRAM
+- Update OC 0.9.3
 
 ### It is the only macOS Package Installer capable of installing OpenCore in Legacy. 
 - Works on an Internal or External disk
@@ -12,9 +12,9 @@
 ### Download ➤ [Legacy OpenCore Packager](https://github.com/chris1111/Legacy-OpenCore-Packager/raw/Master/Legacy%20OpenCore%20Packager.dmg.zip)
 
 
-### Looking for ➤ [OpenCore Packager](https://github.com/chris1111/OpenCore-Packager)
+![Screenshot 1](https://github.com/chris1111/Legacy-OpenCore-Packager/assets/6248794/6ea2bb32-af31-4746-96a3-32a8ce6ac073)
 
-### Looking for ➤ [Clover Packager](https://github.com/chris1111/Clover-Packager)
+![Screenshot 2](https://github.com/chris1111/Legacy-OpenCore-Packager/assets/6248794/0315039f-113a-4670-96ac-4c80cefdd4ab)
 
 ![Screen Shot App](https://user-images.githubusercontent.com/6248794/153775351-303ed6c4-533f-4e11-9589-2dd087f5ab64.png)
 

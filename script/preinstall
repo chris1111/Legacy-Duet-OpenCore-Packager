@@ -42,8 +42,8 @@ Sleep 1
 # Creating log file
 # ---------------------------------------------
 echo "" > "$install_log"
-echo "Legacy OpenCore Bootloader installer log - $( date )" >> "$install_log"
-echo "Installer version: OpenCore ➤ Legacy OpenCore Bootloader" >> "$install_log"
+echo "Duet OpenCore Bootloader installer log - $( date )" >> "$install_log"
+echo "Installer version: ➤ Duet OpenCore Bootloader" >> "$install_log"
 echo "======================================================================" >> "$install_log"
 diskutil list >> "$install_log"
 
@@ -61,3 +61,33 @@ rm -rf /"$3"/Private/tmp/EFIROOTDIR/EFI/BOOT
 rm -rf /"$3"/Private/tmp/EFIROOTDIR/EFI/CLOVER
 rm -rf /"$3"/Private/tmp/EFIROOTDIR/EFI/Clover_Install_Log.txt
 rm -rf /"$3"/Private/tmp/EFIROOTDIR/EFI/OpenCore_Install_Log.txt
+
+response=$(osascript -e 'tell app "System Events" to display dialog "
+Do you want to create the nvram.plist file ?
+Press the OK button to accept\nNO -> Dont create NVRAM" buttons {"NO", "OK"} default button 2 with icon POSIX file "/System/Library/CoreServices/Finder.app/Contents/Resources/Finder.icns"  ')
+action=$(echo $response | cut -d ':' -f2)
+
+
+# Exit if Canceled
+if [ "$action" == "NO" ] ; then
+  echo "NVRAM install -> User select NO"
+  echo "======================================================================" >> "${install_log}"
+  echo "=========== D'ont create NVRAM ===========" >> "${install_log}"
+  echo "======================================================================" >> "${install_log}"
+fi
+
+if [ "$action" == "OK" ] ; then
+echo "-------------------------------------"
+echo "NVRAM install OK ✅ "
+echo "-------------------------------------"
+Sleep 2
+mkdir -p "${DEST_VOL}"/Private/tmp/EFIROOTDIR/NVRAM
+/usr/libexec/PlistBuddy -c "Merge './nvram.used' " "${DEST_VOL}"/Private/tmp/EFIROOTDIR/NVRAM/nvram.plist
+cp -v ./nvram.used "${DEST_VOL}"/Private/tmp/EFIROOTDIR/NVRAM
+Sleep 1
+echo "Create nvram.plist -> /Volumes/EFI/NVRAM "
+echo "======================================================================" >> "${install_log}"
+echo "=========== Create nvram.plist -> /Volumes/EFI/NVRAM ===========" >> "${install_log}"
+echo "======================================================================" >> "${install_log}"
+fi
+
