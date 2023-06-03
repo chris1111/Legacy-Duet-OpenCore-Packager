@@ -1,7 +1,7 @@
 # Legacy-OpenCore-Packager
 
-### Latest Update 11 May 2023 Add Option creating NVRAM
-- Update OC 0.9.3
+### Latest Update 03 June 2023 Update Readme Package
+- Update 11 May 2023 Add Option creating NVRAM, Update OC 0.9.3.
 
 ### It is the only macOS Package Installer capable of installing OpenCore in Legacy. 
 - Works on an Internal or External disk
