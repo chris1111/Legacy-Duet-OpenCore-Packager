@@ -1,4 +1,4 @@
-# Legacy-Duet--OpenCore-Packager
+# Legacy-Duet-OpenCore-Packager
 
 ### Latest Update 03 June 2023 Update Readme Package
 - Update 11 May 2023 Add Option creating NVRAM, Update OC 0.9.3.
